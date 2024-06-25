@@ -158,7 +158,7 @@ The metric used to evaluate the model is the accuracy, which is the percentage o
 | Baseline   | 0.2101             | 0.2291                |
 | Fine-tuned | 0.8561             | 0.8567                |
 
-The results show that the fine-tuned model significantly outperforms the baseline model on the MNLI dataset. The fine-tuned model achieves an average accuracy of 85.6% on the validation set, compared to 2.5% for the baseline model. This demonstrates the effectiveness of fine-tuning LLMs with LoRA for the MNLI task.
+The results show that the fine-tuned model significantly outperforms the baseline model on the MNLI dataset. The fine-tuned model achieves an average accuracy of 85.6% on the validation set, compared to 21.9% for the baseline model. This demonstrates the effectiveness of fine-tuning LLMs with LoRA for the MNLI task.
 
 
 # 5. Conclusion
