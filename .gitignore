@@ -184,7 +184,7 @@ cython_debug/
 *.pt
 
 # visual studio code
-.vscode
+# .vscode
 
 # logging
 wandb

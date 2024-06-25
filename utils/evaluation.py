@@ -41,12 +41,8 @@ def evaluate(
 
     with torch.no_grad():
         for batch in tqdm(dataloader, desc="Evaluating", leave=False):
-            # max_input_len = max(
-            #     [len(batch[prompt_key][i]) for i in range(len(batch[prompt_key]))]
-            # )
             generated_tokens_with_prompt = model.generate(
                 batch[prompt_key],
-                # max_length=max_input_len + max_output_tokens,
                 max_new_tokens=max_output_tokens,
                 pad_token_id=tokenizer.pad_token_id,
                 temperature=temperature,

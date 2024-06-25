@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.ipynb_checkpoints":true,
+        "**/**.egg-info":true,
+        "**/build":true,
+        "**/.ruff_cache":true,
+        "**/.mypy_cache":true,
+        "*.amlignore*":true
+    },
+    "[python]":{
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "jupyter.notebookFileRoot": "${workspaceFolder}/"
+}

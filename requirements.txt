@@ -1,0 +1,9 @@
+torch
+transformers
+peft
+bitsandbytes
+datasets
+jupyter
+notebook
+tqdm
+wandb

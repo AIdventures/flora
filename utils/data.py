@@ -35,23 +35,16 @@ def get_tokenize_function(tokenizer, max_seq_len: int = 1024):
     def tokenize_function(examples):
         # Tokenize the prompts
         tokenized_outputs = tokenizer(
-            examples["prompt"], truncation=True, max_length=max_seq_len, padding=True
+            examples["prompt"],  # truncation=True, max_length=max_seq_len, padding=True
         )  # , padding='max_length'
 
         # Set labels to input_ids. This assumes a task like text generation where
         # the model learns to predict the input sequence itself (next word).
         # You don’t need labels (also known as an unsupervised task)
         # because the next word is the label
+        # shifting is handled inside the model. ‘input_ids’ and ‘labels’ can be very same tensors, however the model will do a ‘causal-shift’ inside.
+        # https://discuss.huggingface.co/t/how-is-the-data-shifted-by-one-token-during-causallm-fine-tuning/36386/3
         tokenized_outputs["labels"] = tokenized_outputs["input_ids"].copy()
-
-        # We are going to additionally generate the input for the prompt part
-        # This will be used to generate the prompt completion for evaluation
-        #####prompt_tokenized_outputs = tokenizer(
-        #####    examples["prompt"], truncation=True, max_length=max_seq_len
-        #####)
-        #####tokenized_outputs["prompt_input_ids"] = prompt_tokenized_outputs[
-        #####    "input_ids"
-        #####].copy()
 
         # Finally return the tokenized outputs, they will be the 'input_ids'
         return tokenized_outputs
