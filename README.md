@@ -8,20 +8,20 @@ This repository contains the code for fine-tune large language models (LLMs) wit
 
 # Index
 
-1. [Project Overview](#1.-Project-Overview)
-2. [The Process](#2.-The-Process)
-    1. [Data Preprocessing](#2.1.-Data-Preprocessing)
-    2. [Model Load and Preparation](#2.2.-Model-Load-and-Preparation)
-    3. [Fine-tuning](#2.3.-Fine-tuning)
-    4. [Logging and Evaluation](#2.4.-Logging-and-Evaluation)
-3. [Installation](#3.-Installation)
-4. [Results](#4.-Results)
-5. [Conclusion](#5.-Conclusion)
+1. [Project Overview](#project-overview)
+2. [The Process](#the-process)
+    1. [Data Preprocessing](#data-preprocessing)
+    2. [Model Load and Preparation](#model-load-and-preparation)
+    3. [Fine-tuning](#fine-tuning)
+    4. [Logging and Evaluation](#logging-and-evaluation)
+3. [Installation](#installation)
+4. [Results](#results)
+5. [Conclusion](#conclusion)
 
 # 1. Project Overview
 
 ```
-├── utils          <- Utility functions
+├── utils  <- Utility functions
 │   ├── args.py          <- Arguments parser
 │   ├── completions.py   <- Completions generation
 │   ├── data.py          <- Data pre/post-processing
